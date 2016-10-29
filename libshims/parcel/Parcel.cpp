@@ -24,10 +24,14 @@ extern "C" {
 #ifdef __aarch64__
     // C++11 Parcel::writeString16(const char16_t* str, size_t len)
     status_t _ZN7android6Parcel13writeString16EPKDsm(const char16_t* str, size_t len);
+    status_t _ZNK7android13ICameraClient22getInterfaceDescriptorEv(const char16_t* str, size_t len);
 
     // Old signature with typedef uint16_t
     status_t _ZN7android6Parcel13writeString16EPKtm(const char16_t* str, size_t len) {
         return _ZN7android6Parcel13writeString16EPKDsm(str, len);
+    }
+    status_t _ZNK7android13ICameraClient22getInterfaceDescriptorEv(const char16_t* str, size_t len) {
+        return _ZNK7android13ICameraClient22getInterfaceDescriptorEv(str, len);
     }
 #else
     // C++11 Parcel::writeString16(const char16_t* str, size_t len)
